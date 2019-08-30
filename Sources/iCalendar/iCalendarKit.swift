@@ -1,5 +1,5 @@
 //
-//  CalendarKit.swift
+//  iCalendarKit.swift
 //  Demo
 //
 //  Created by roy on 2019/7/10.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct CalendarKit {
+public struct iCalendarKit {
     public static func prase(withContent content: String) throws -> iCalendar {
         return try parsedCalendar(for: try Parser(withContent: content))
     }
