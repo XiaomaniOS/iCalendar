@@ -48,7 +48,7 @@ public final class TimeZoneStandard: Component {
     private func configureCalendarTimeZoneString(_ value: String) {
         var parent = self.parent
         while let parentComponent = parent {
-            if let calendar = parentComponent as? Calendar, nil == calendar.timeZoneString {
+            if let calendar = parentComponent as? iCalendar, nil == calendar.timeZoneString {
                 calendar.timeZoneString = value
                 return
             }

@@ -33,10 +33,10 @@ class Parser {
     }
     
     /// 解析结果 Calendar
-    var parsedCalendar: Result<Calendar, ParseError.Component> {
+    var parsedCalendar: Result<iCalendar, ParseError.Component> {
         guard
             let component = componentQueue.pull(),
-            let calendar = component as? Calendar
+            let calendar = component as? iCalendar
         else {
             return .failure(.notBeginWithCalendar)
         }
@@ -264,7 +264,7 @@ class Parser {
     private func getComponent(for type: RegistryTypes.Component) -> ComponentProtocol {
         switch type {
         case .vCalendar:
-            return Calendar(type)
+            return iCalendar(type)
         case .vEvent:
             return Event(type)
         case .vTimeZone:

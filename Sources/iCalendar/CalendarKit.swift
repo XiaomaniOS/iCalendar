@@ -9,19 +9,19 @@
 import Foundation
 
 public struct CalendarKit {
-    public static func prase(withContent content: String) throws -> Calendar {
+    public static func prase(withContent content: String) throws -> iCalendar {
         return try parsedCalendar(for: try Parser(withContent: content))
     }
     
-    public static func prase(withUrl url: URL) throws -> Calendar {
+    public static func prase(withUrl url: URL) throws -> iCalendar {
         return try parsedCalendar(for: try Parser(url: url))
     }
     
-    public static func prase(withFilePath path: String) throws -> Calendar {
+    public static func prase(withFilePath path: String) throws -> iCalendar {
         return try parsedCalendar(for: Parser(filePath: path))
     }
     
-    private static func parsedCalendar(for parser: Parser) throws -> Calendar {
+    private static func parsedCalendar(for parser: Parser) throws -> iCalendar {
         switch parser.parsedCalendar {
         case .success(let calendar):
             return calendar

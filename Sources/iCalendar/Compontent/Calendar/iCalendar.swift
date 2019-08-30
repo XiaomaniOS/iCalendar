@@ -8,7 +8,7 @@
 
 import Foundation
 
-public final class Calendar: Component {
+public final class iCalendar: Component {
     public var timeZoneString: String?
     
     public required init(_ type: RegistryTypes.Component) {

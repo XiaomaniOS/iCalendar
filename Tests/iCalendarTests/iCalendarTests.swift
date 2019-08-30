@@ -15,7 +15,7 @@ final class iCalendarTests: XCTestCase {
     }
         
     func testExample() {
-        XCTAssertNotNil(iCalendar.Calendar.init(.vCalendar).timeZoneString)
+        XCTAssertNotNil(iCalendar.iCalendar.init(.vCalendar).timeZoneString)
     }
 
     static var allTests = [
